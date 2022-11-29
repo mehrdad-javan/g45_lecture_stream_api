@@ -51,7 +51,9 @@ public class StreamOperationsDemo {
   public static void ex3() {
     List<String> names = Arrays.asList("Niclas", "Erik", "Ulf", "Kent", "Fredrik");
 
-    Optional<String> optional = names.stream().findFirst();
+    //String name = names.stream().filter(s -> s.equals("TEST")).findFirst().orElseThrow(() -> new IllegalArgumentException("Name was not valid"));
+
+    Optional<String> optional = names.stream().filter(s -> s.equals("TEST")).findFirst();
     if (optional.isPresent()) System.out.println(optional.get());
 
   }
